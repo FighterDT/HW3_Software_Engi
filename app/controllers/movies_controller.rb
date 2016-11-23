@@ -11,7 +11,7 @@ class MoviesController < ApplicationController
   end
   def sortByTitle
       @movies = Movie.order(:title)
-      redirect_to movies
+      redirect_to moivesByTitle
       
   end
   
