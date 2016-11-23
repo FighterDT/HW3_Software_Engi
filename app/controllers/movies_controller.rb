@@ -13,7 +13,7 @@ class MoviesController < ApplicationController
   
   def index
     @movies = Movie.all
-    @movies = Movie.order!(movie_params)
+    
   end
 
   def new
