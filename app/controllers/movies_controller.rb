@@ -9,14 +9,11 @@ class MoviesController < ApplicationController
     @movie = Movie.find(id) # look up movie by unique ID
     # will render app/views/movies/show.<extension> by default
   end
-  def sortByTitle
-      @movies = Movie.order(:title)
-      redirect_to moivesByTitle
-      
-  end
+  
   
   def index
     @movies = Movie.all
+    @movies = Movie.order!(movie_params)
   end
 
   def new
